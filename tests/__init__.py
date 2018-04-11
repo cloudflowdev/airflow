@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# flake8: noqa
+
 from __future__ import absolute_import
 
 from .api import *
@@ -24,4 +26,5 @@ from .impersonation import *
 from .models import *
 from .operators import *
 from .security import *
+from .task import *
 from .utils import *
