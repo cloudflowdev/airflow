@@ -34,8 +34,6 @@ configuring an Airflow environment.
     connection/index
     secure-connections
     write-logs
-    executor/use-celery
-    executor/use-dask
     run-behind-proxy
     run-with-systemd
     run-with-upstart
