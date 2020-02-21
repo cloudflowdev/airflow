@@ -29,7 +29,7 @@ echo "
 .. code-block:: text
 " >"${TMP_FILE}"
 
-export SEPARATOR_WIDTH=100
+export SEPARATOR_WIDTH=80
 export AIRFLOW_CI_SILENT="true"
 ./breeze --help | sed 's/^/  /' | sed 's/ *$//' >>"${TMP_FILE}"
 
