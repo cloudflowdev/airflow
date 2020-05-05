@@ -33,6 +33,7 @@ determine what actually executes when your DAG runs.
 
     bash
     amazon/aws/index
+    apache/index
     dingding
     gcp/index
     http/index
