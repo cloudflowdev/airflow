@@ -42,4 +42,5 @@ docker-compose \
     -f "${SCRIPTS_CI_DIR}/docker-compose/base.yml" \
     -f "${SCRIPTS_CI_DIR}/docker-compose/local.yml" \
     -f "${SCRIPTS_CI_DIR}/docker-compose/forward-credentials.yml" \
-    run airflow /opt/airflow/scripts/ci/in_container/run_fix_ownership.sh
+    run --entrypoint /bin/bash \
+    airflow -c /opt/airflow/scripts/ci/in_container/run_fix_ownership.sh
