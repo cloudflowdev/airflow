@@ -47,12 +47,11 @@ except FileNotFoundError:
 
 
 def do_setup(version_suffix_for_pypi=''):
-    """
-    Perform the package setup.
-    """
+    """Perform the package {{ PACKAGE_PIP_NAME }} setup."""
     setup(
         name='{{ PACKAGE_PIP_NAME }}',
-        description='{{ PROVIDER_TYPE }} package {{ PACKAGE_PIP_NAME }} for Apache Airflow',
+        description='{{ PROVIDER_TYPE }} package '
+            '{{ PACKAGE_PIP_NAME }} for Apache Airflow',
         long_description=long_description,
         long_description_content_type='text/markdown',
         license='Apache License 2.0',
@@ -79,7 +78,7 @@ def do_setup(version_suffix_for_pypi=''):
         author_email='dev@airflow.apache.org',
         url='http://airflow.apache.org/',
         download_url=(
-            'https://archive.apache.org/dist/airflow/{{ PROVIDERS_FOLDER }}' + version),
+            'https://archive.apache.org/dist/airflow/{{ PROVIDERS_FOLDER }}'),
         python_requires='~=3.6',
         project_urls={
             'Documentation': 'https://airflow.apache.org/docs/',
