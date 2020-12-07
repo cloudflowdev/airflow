@@ -34,12 +34,12 @@ depends_on = None
 
 
 def upgrade():  # noqa: D103
-    conn = op.get_bind()
+    conn = op.get_bind()  # pylint: disable=no-member
     if conn.dialect.name == "mysql":
         op.alter_column(table_name='variable', column_name='val', type_=mysql.MEDIUMTEXT)
 
 
 def downgrade():  # noqa: D103
-    conn = op.get_bind()
+    conn = op.get_bind()  # pylint: disable=no-member
     if conn.dialect.name == "mysql":
         op.alter_column(table_name='variable', column_name='val', type_=mysql.TEXT)
