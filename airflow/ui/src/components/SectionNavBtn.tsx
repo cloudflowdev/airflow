@@ -26,16 +26,16 @@ interface Props {
     label: string;
     path: string;
   };
-  currentLabel: string;
+  currentView: string;
 }
 
-const SectionNavBtn: React.FC<Props> = ({ item, currentLabel }) => {
+const SectionNavBtn: React.FC<Props> = ({ item, currentView }) => {
   const { label, path } = item;
   return (
     <Button
       as={Link}
       to={path}
-      variant={currentLabel === label ? 'solid' : 'ghost'}
+      variant={currentView === label ? 'solid' : 'ghost'}
       colorScheme="blue"
       size="sm"
       mr="2"
