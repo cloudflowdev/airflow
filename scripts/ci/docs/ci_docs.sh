@@ -30,8 +30,7 @@ export PYTHONPATH=${AIRFLOW_SOURCES}
 
 pip install --upgrade pip==20.2.4
 
-pip install .[doc] --upgrade --constraint \
-    "https://raw.githubusercontent.com/apache/airflow/constraints-${DEFAULT_BRANCH}/constraints-${PYTHON_MAJOR_MINOR_VERSION}.txt"
+pip install .[doc] --upgrade --constraint "${AIRFLOW_SOURCES}/constraints.txt"
 
 start_end::group_end
 
