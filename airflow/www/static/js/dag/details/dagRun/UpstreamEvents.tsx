@@ -67,7 +67,7 @@ const UpstreamEvents = ({ runId }: Props) => {
   );
 
   return (
-    <Box mt={3}>
+    <Box mt={3} flexGrow={1}>
       <Heading size="md">Upstream Dataset Events</Heading>
       <Text>Updates to the upstream datasets since the last dataset-triggered DAG run</Text>
       <Table
