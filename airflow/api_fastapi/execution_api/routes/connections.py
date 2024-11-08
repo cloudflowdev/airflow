@@ -28,9 +28,7 @@ from airflow.exceptions import AirflowNotFoundException
 from airflow.models.connection import Connection
 
 # TODO: Add dependency on JWT token
-connection_router = AirflowRouter(
-    prefix="/connection",
-    tags=["Connection"],
+router = AirflowRouter(
     responses={status.HTTP_404_NOT_FOUND: {"description": "Connection not found"}},
 )
 
@@ -42,7 +40,7 @@ def get_task_token() -> datamodels.TIToken:
     return datamodels.TIToken(ti_key="test_key")
 
 
-@connection_router.get(
+@router.get(
     "/{connection_id}",
     responses={
         status.HTTP_401_UNAUTHORIZED: {"description": "Unauthorized"},
