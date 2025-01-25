@@ -14,13 +14,4 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-
-# This exists so that pytest doesn't get confused about namespace packages
-# and think that `tests/conftest.py` and `providers/tests/conftest.py` are
-# both "tests.conftest"
-#
-# This is a temporary solution until https://github.com/apache/airflow/issues/42632
-# is done
-from __future__ import annotations
-
 __path__ = __import__("pkgutil").extend_path(__path__, __name__)  # type: ignore
