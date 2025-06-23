@@ -21,3 +21,7 @@ extends: default
 rules:
   line-length:
     max: 110
+
+  comments:
+    ignore:
+      - /.github/workflows/*.yml
