@@ -74,7 +74,8 @@ export const WorkerShutdownButton = ({ onShutdown, workerName }: WorkerShutdownB
               <Dialog.Body>
                 <Text>Are you sure you want to request shutdown for worker {workerName}?</Text>
                 <Text fontSize="sm" color="red.500" mt={2}>
-                  This will terminate the worker process on the remote edge site.
+                  This stops the worker on the remote edge. You can't restart it from the UI—start it remotely
+                  instead.
                 </Text>
               </Dialog.Body>
               <Dialog.Footer>
